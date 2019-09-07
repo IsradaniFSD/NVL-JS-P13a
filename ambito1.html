@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+		
+		//numeros primos
+		//creo la variable global n con un valor de 50
+		var n=50;
+
+		//Creo la funcion
+		function Es_Primo(num) {
+//La funcion recibe el numero del segundo for, y si el numero es 1 o 2 no entran en el bucle,
+//Si el numero vale 3 o mas si entra en el bucle y si al dividirlo entre 2 da 0 de resto, no es primo.
+				for(var i=2;i<=num-1;i++) {
+					if(num%i==0) {
+						return false;
+					}
+				}
+					return true;
+		}
+//Este for tiene una variable j que vale 1 y da vueltas en el bucle hasta llegar a 50
+//luego llama a la funcion con el valor de j. Si lo que nos devuelve la funcion el primo, entra en el if, sino en el else
+		for(var j=1;j<=n;j++) {
+			if(Es_Primo(j)) {
+				document.write("<br>" + "Es primo",j);
+			} else {
+				document.write("<br>" + "No es primo",j);
+			}
+		}
+		</script>
+	</head>
+	<body>
+	</body>
+</html> 
